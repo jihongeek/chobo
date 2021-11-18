@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js Week3</title>   
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id = "app">
+        <h3>제목 is {{title}} </h3>
+        <!-- 템플릿에 계산 수행 (복잡한 로직 시에 문제 발생 : computed 사용?)-->
+        <p>질문이 {{questions.length > 0 ? '있음' : '없음'}}</p>
+        <p>질문이 {{hasQuestion}} (computed 사용)</p> 
+        {{questionIdx}}번째 질문
+        <!-- 템플릿에서 메소드 호출! (메소드에 부작용(Side Effect)가 없어야.. && computed()를 사용하는 게 좋다? ) -->
+        <!-- 부작용 있으면 라이프사이클 훅으로 처리하자! -->
+        <button @click = "increment">다음 질문</button>
+    </div> 
+    <script src="week3.js"></script>
+</body>
